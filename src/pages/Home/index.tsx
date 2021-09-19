@@ -52,17 +52,9 @@ const Home = (): JSX.Element => {
     <ProductList>
       {products.map((product) => (
         <li key={product.id}>
-          <img
-            // src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
-            src={product.image}
-            alt={product.title}
-            // alt="Tênis de Caminhada Leve Confortável"
-          />
-          <strong>
-            {/* Tênis de Caminhada Leve Confortável */}
-            {product.title}
-          </strong>
-          {/* <span>//R$ 179,90</span> */}
+          <img src={product.image} alt={product.title} />
+          <strong>{product.title}</strong>
+
           <span>{product.priceFormatted}</span>
           <button
             type="button"
